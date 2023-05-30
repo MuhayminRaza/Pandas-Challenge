@@ -36,7 +36,7 @@ district_summary_df = pd.DataFrame({
     "% Passing Math": [percentagePassingMath],
     "% Passing Reading": [percentagePassingReading],
     "% Overall Passing Rate": [percentageOverallPassingRate]
-# Combine the series into a dataframe
+
 grade_summary_df = pd.DataFrame({"9th": grade9th_ds,
       "10th": grade10th_ds,
       "11th": grade11th_ds,
