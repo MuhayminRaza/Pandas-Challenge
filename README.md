@@ -27,24 +27,23 @@ The data was sorted based on different factors such as top performing schools, b
 Note: 
 The following code was written with the help of a TA in office hours. 
 
-spending_summary_df[["Average Math Score",
-                    "Average Reading Score",
-                    "% Passing Math",
-                    "% Passing Reading",
-                    "% Overall Passing Rate"]]
+spending_summary = pd.DataFrame({
+        "Average Math Score": spending_math_scores,
+        "Average Reading Score": spending_reading_scores,
+        "% Passing Math": spending_passing_math,
+        "% Passing Reading": spending_passing_reading,
+        "% Overall Passing": overall_passing_spending})      
 
-size_summary_df = per_school_summary.groupby(["School Size)"]).mean()
+size_summary = pd.DataFrame({
+        "Average Math Score": size_math_scores,
+        "Average Reading Score": size_reading_scores,
+        "% Passing Math": size_passing_math,
+        "% Passing Reading": size_passing_reading,
+        "% Overall Passing": size_overall_passing})    
 
-size_summary_df[["Average Math Score",
-                "Average Reading Score",
-                "% Passing Math",
-                "% Passing Reading",
-                "% Overall Passing Rate"]]
-
-type_summary_df = per_school_summary.groupby(["School Type)"]).mean()
-
-type_summary_df[["Average Math Score",
-                "Average Reading Score",
-                "% Passing Math",
-                "% Passing Reading",
-                "% Overall Passing Rate"]]
+type_summary = pd.DataFrame({
+        "Average Math Score": average_math_score_by_type,
+        "Average Reading Score": average_reading_score_by_type,
+        "% Passing Math": average_percent_passing_math_by_type,
+        "% Passing Reading": average_percent_passing_reading_by_type,
+        "% Overall Passing": average_percent_overall_passing_by_type})      
